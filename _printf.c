@@ -2,7 +2,7 @@
 
 /**
  * _printf - produce ouput according to a format.
- * @format: string that specifies how subsequent
+ * @format: string that specifies how subsequent.
  * arguments are converter for ouput.
  * Return: total number of characters printed.
  * Or negarive value if an output error or an encoding error.
@@ -10,27 +10,27 @@
 int _printf(const char *format, ...)
 {
 	va_list arguments;
-	int i_format = 0;
+	int index = 0;
+	int total_printed = 0;
+	int *p_total = &total_printed;
 
 	va_start(arguments, format);
 
-	while (format && format[i_format])
+	while (format && format[index])
 	{
-		if (format[i_format] == '%')
+		if (format[index] == '%')
 		{
-			if (check_type(format[i_format + 1], arguments) == 1)
-			{
-				i_format++;
-			}
+			if (check_type(format[index + 1], arguments, p_total) == 1)
+				index++;
 		}
 		else
 		{
-			_putchar(format[i_format]);
+			_putchar(format[index], p_total);
 		}
 
-		i_format++;
+		index++;
 	}
 
 	va_end(arguments);
-	return (0);
+	return (*p_total);
 }

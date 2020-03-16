@@ -6,12 +6,12 @@
 #include <stdlib.h>
 
 int _printf(const char *format, ...);
-int _putchar(char c);
-int check_type(char c, va_list arguments);
-void print_c(va_list arguments);
-void print_s(va_list arguments);
-void print_di(va_list arguments);
-void print_number(int n);
+int check_type(char c, va_list arguments, int *p_total);
+int _putchar(char c, int *p_total);
+void print_c(va_list arguments, int *p_total);
+void print_s(va_list arguments, int *p_total);
+void print_di(va_list arguments, int *p_total);
+void print_number(int n, int *p_total);
 
 /**
  * struct var_type - type var format.
@@ -22,7 +22,7 @@ void print_number(int n);
 typedef struct var_type
 {
 	char name;
-	void (*fun)();
+	void (*fun)(va_list, int *);
 } var_type_t;
 
 #endif /* HOLBERTON_H */
