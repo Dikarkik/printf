@@ -5,6 +5,16 @@
 #include <unistd.h>
 #include <stdlib.h>
 
-int _printf(const char *format, ...)
+int _printf(const char *format, ...);
+int check_type(char c, va_list arguments);
+void print_c(va_list arguments);
+void print_s(va_list arguments);
+void print_di(va_list arguments);
+
+typedef struct var_type
+{
+	char name;
+	void (*fun)();
+} var_type_t;
 
 #endif /* HOLBERTON_H */
