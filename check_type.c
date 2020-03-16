@@ -5,11 +5,12 @@
  * and call a print function to print arguments.
  * @c: char.
  * @arguments: va_list variable.
+ * @p_total: pointer to total_printed.
  * Return: 1 if c match with some format. 0 otherwise.
  */
-int check_type(char c, va_list arguments)
+int check_type(char c, va_list arguments, int *p_total)
 {
-	char p_symbol = '%';
+	char c_symbol = '%';
 	int i_type = 0;
 	var_type_t type_list[] = {
 		{'c', print_c},
@@ -22,13 +23,13 @@ int check_type(char c, va_list arguments)
 	{
 		if (c == '%')
 		{
-			write(1, &p_symbol, 1);
+			_putchar(c_symbol, p_total);
 			return (1);
 		}
 
 		if (c == type_list[i_type].name)
 		{
-			type_list[i_type].fun(arguments);
+			type_list[i_type].fun(arguments, p_total);
 			return (1);
 		}
 
