@@ -7,7 +7,15 @@
  */
 void print_s(va_list arguments)
 {
-        char *str = va_arg(arguments, char *);
 
-	write(1, str, 6);
+	char *str = va_arg(arguments, char *);
+	int index = 0;
+
+	if (str == NULL || str[0] == '\0')
+		return;
+
+	while (str[index])
+		index++;
+
+	write(1, str, index);
 }

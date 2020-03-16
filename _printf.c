@@ -5,8 +5,7 @@
  * @format: string that specifies how subsequent
  * arguments are converter for ouput.
  * Return: total number of characters printed.
- * Or negarive value if an output error or an encoding error.
- */
+*/
 int _printf(const char *format, ...)
 {
 	va_list arguments;
