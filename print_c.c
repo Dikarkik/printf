@@ -7,7 +7,7 @@
  */
 void print_c(va_list arguments)
 {
-        char c = va_arg(arguments, int);
+	char c = va_arg(arguments, int);
 
-        write(1, &c, 1);
+	write(1, &c, 1);
 }

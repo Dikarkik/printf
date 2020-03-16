@@ -7,8 +7,8 @@
  */
 void print_di(va_list arguments)
 {
-        int n;
+	int n;
 
-        n = va_arg(arguments, int);
-        print_number(n);
+	n = va_arg(arguments, int);
+	print_number(n);
 }
