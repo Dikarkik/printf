@@ -9,7 +9,7 @@
  */
 int check_type(char c, va_list arguments)
 {
-	char c = '%';
+	char p_symbol = '%';
 	int i_type = 0;
 	var_type_t type_list[] = {
 		{'c', print_c},
@@ -22,7 +22,7 @@ int check_type(char c, va_list arguments)
 	{
 		if (c == '%')
 		{
-			write(1, &c, 1);
+			write(1, &p_symbol, 1);
 			return (1);
 		}
 
