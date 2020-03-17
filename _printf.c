@@ -26,7 +26,8 @@ int _printf(const char *format, ...)
 			{
 				_putchar('%', p_total);
 			}
-}
+		}
+
 		else
 		{
 			_putchar(format[index], p_total);
