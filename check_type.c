@@ -31,7 +31,7 @@ int check_type(char c, va_list arguments, int *p_total)
 			type_list[i_type].fun(arguments, p_total);
 			return (1);
 		}
-    
+
 		i_type++;
 	}
 
