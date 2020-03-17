@@ -10,20 +10,19 @@
  */
 int check_type(char c, va_list arguments, int *p_total)
 {
-	char c_symbol = '%';
 	int i_type = 0;
 	var_type_t type_list[] = {
 		{'c', print_c},
 		{'s', print_s},
 		{'d', print_di},
-		{'i', print_di}
+		{'i', print_di},
 	};
 
 	while (type_list[i_type].name)
 	{
 		if (c == '%')
 		{
-			_putchar(c_symbol, p_total);
+			_putchar('%', p_total);
 			return (1);
 		}
 
@@ -32,7 +31,7 @@ int check_type(char c, va_list arguments, int *p_total)
 			type_list[i_type].fun(arguments, p_total);
 			return (1);
 		}
-
+    
 		i_type++;
 	}
 

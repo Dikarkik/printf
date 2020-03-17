@@ -9,11 +9,11 @@
  */
 int _putchar(char c, int *p_total)
 {
-	int return_write = 0;
+	int result_write = 0;
 
-	return_write = write(1, &c, 1);
+	result_write = write(1, &c, 1);
 
-	if (return_write == 1)
+	if (result_write == 1)
 	{
 		*p_total = *p_total + 1;
 		return (1);

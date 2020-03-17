@@ -22,7 +22,10 @@ int _printf(const char *format, ...)
 		{
 			if (check_type(format[index + 1], arguments, p_total) == 1)
 				index++;
-		}
+			else
+			{
+				_putchar('%', p_total);
+			}
 		else
 		{
 			_putchar(format[index], p_total);
