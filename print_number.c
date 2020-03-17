@@ -9,7 +9,7 @@
 void print_number(int n, int *p_total)
 
 {
-	int num;
+	unsigned int num;
 
 	num = n;
 	if (n < 0)
@@ -18,8 +18,7 @@ void print_number(int n, int *p_total)
 		num = -num;
 	}
 	if ((num / 10) > 0)
-	{
 		print_number(num / 10, p_total);
-	}
+
 	_putchar((num % 10) + '0', p_total);
 }
