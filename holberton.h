@@ -7,6 +7,7 @@
 
 int _printf(const char *format, ...);
 int check_type(char c, va_list arguments, int *p_total);
+void check_spaces_flag(int *p_spaces_flag, char c, int *p_total);
 int _putchar(char c, int *p_total);
 void print_c(va_list arguments, int *p_total);
 void print_s(va_list arguments, int *p_total);
