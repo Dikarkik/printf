@@ -5,10 +5,22 @@
 **Format specifier**
 Each of the variables represented in % will search for its corresponding variable or constant inscribed in the final list of the function, as described in the example:
 
-![Format specifier](https://www.it.uc3m.es/pbasanta/asng/course_notes/input_output_printf_example_en.png)
+
+```sh
+Code: printf("color %s, number %d", "red", 1234567)
+ - output:  Color red, Number 1234567.
+```
 
 note the format parameters that can be used
 
+```sh
+FORMAT =>	REPLACED
+%i => replaced an integer variable
+%d => repalced an decimal base 10
+%c => replaced an character variable
+%s => replaced a pointer char variable
+%% => replaced by a single percent symbol
+```
 
 
 # Files
@@ -44,4 +56,3 @@ which is obtained when compiling giving its generic executable file name
 ## Diagrams
 
 https://drive.google.com/file/d/10Mrp-Kb_cqe_X_Lad57T8koYHkeYr7dJ/view?usp=sharing
-
