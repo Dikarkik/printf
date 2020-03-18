@@ -58,4 +58,6 @@ which is obtained when compiling giving its generic executable file name
 Diagram _printf
 https://drive.google.com/file/d/10Mrp-Kb_cqe_X_Lad57T8koYHkeYr7dJ/view?usp=sharing
 
+
 Diagram check_type https://drive.google.com/file/d/17zgquaDk3QOPwyYOVWqJsgFr-jG6AXme/view?usp=sharing
+
