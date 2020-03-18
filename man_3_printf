@@ -1,0 +1,124 @@
+.TH PRINTF 3 "16 Mar 2020" "V 1.0" "_printf man page"
+
+.SH NAME
+
+.B _printf
+- get format or text and print ordered data.
+
+.SH SYNOPSIS
+
+#include <unistd.h>
+.br
+#include <stdarg.h>
+.br
+#include "holberton.h"
+
+int _printf(const char *format, ...);
+
+.SH DESCRIPTION
+
+Takes a text along with the entry points of the value formats indicated after
+.br
+the percent sign, in the same order indicated in the format, the information
+.br
+of the corresponding variable is displayed.
+
+
+.SH Return Value
+
+Total number of characters printed.
+
+.SH OPTIONS
+.B _printf
+have handle the following conversion specifiers:
+
+.B %c
+= print a variable character
+.br
+.B %s
+= print a variable string
+.br
+.B %d
+= print a variable decimal
+.br
+.B %i
+= print a variable integer
+.br
+.B %%
+= print a caracter porcent
+
+.SH EXAMPLES
+Each of the variables represented in % will search for its corresponding
+.br
+variable or constant inscribed in the final list of the function, as described
+.br
+in the example:
+
+.B To print "Hello World":
+
+   #include <unistd.h>
+   #include <stdarg.h>
+   #include "holberton.h"
+
+   int main(void)
+   {
+.br
+       char *str = "Hello World";
+.br
+       _printf("%s\n", str);
+.br
+       return (0);
+   }
+
+.B To print three numbers separated by comma:
+
+   #include <unistd.h>
+   #include <stdarg.h>
+   #include "holberton.h"
+
+   int main(void)
+   {
+.br
+       int n1 = 10;
+.br
+       int n2 = 20;
+.br
+       int n2 = 30;
+.br
+       _printf("%d, %d, %d\n", n1, n2, n3);
+.br
+       return (0);
+.br
+   }
+
+.B To print the sum of two numbers:
+
+   #include <unistd.h>
+   #include <stdarg.h>
+   #include "holberton.h"
+
+   int main()
+   {
+.br
+       int a, b, c;
+.br
+       a = 2
+.br
+       b = 7
+.br
+       c = a + b;
+.br
+       _printf("%d + %d = %d\n", a, b, c);
+.br
+       return 0;
+.br
+}
+
+.SH SEE ALSO
+.I printf(3)
+
+.SH BUGS
+No known bugs.
+
+.SH AUTHOR
+Diana Carolina Quintero Caro and Roger Bayron Rendon Munera
